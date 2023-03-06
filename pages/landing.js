@@ -19,7 +19,7 @@ import styles from "/styles/jss/nextjs-material-kit/pages/landingPage.js";
 
 // Sections for this page
 import ProductSection from "../section/LandingPage-Sections/ProductSection.js";
-import TeamSection from "../section/LandingPage-sections/TeamSection.js";
+// import TeamSection from "../section/LandingPage-sections/TeamSection.js";
 
 const dashboardRoutes = [];
 
@@ -60,7 +60,7 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <ProductSection />
-          <TeamSection />
+          {/* <TeamSection /> */}
         </div>
       </div>
       <Footer />
