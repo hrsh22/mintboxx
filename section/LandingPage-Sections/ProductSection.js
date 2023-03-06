@@ -10,11 +10,11 @@ import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import StyleIcon from "@mui/icons-material/Style";
 import UpcomingIcon from "@mui/icons-material/Upcoming";
 // core components
-import GridContainer from "/components/Grid/GridContainer.js";
-import GridItem from "/components/Grid/GridItem.js";
-import InfoArea from "/components/InfoArea/InfoArea.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
+import InfoArea from "../../components/InfoArea/InfoArea.js";
 
-import styles from "/styles/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
+import styles from "../../styles/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
 
 const useStyles = makeStyles(styles);
 

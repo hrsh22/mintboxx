@@ -4,8 +4,8 @@ import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 
 // core components
-import GridContainer from "/components/Grid/GridContainer.js";
-import Button from "/components/CustomButtons/Button.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import Button from "../../components/CustomButtons/Button.js";
 import { useState, useEffect } from "react";
 import { InboxOutlined } from "@ant-design/icons";
 import { message, Upload, Form } from "antd";

@@ -5,9 +5,9 @@ import { Card } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 
 // core components
-import GridContainer from "/components/Grid/GridContainer.js";
-import GridItem from "/components/Grid/GridItem.js";
-import Button from "/components/CustomButtons/Button.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
+import Button from "../../components/CustomButtons/Button.js";
 import { useState, useEffect } from "react";
 import { InboxOutlined } from "@ant-design/icons";
 import { message, Upload, Form } from "antd";
@@ -17,12 +17,12 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import TextField from "@mui/material/TextField";
 
-import InfoArea from "/components/InfoArea/InfoArea.js";
+import InfoArea from "../../components/InfoArea/InfoArea.js";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import Favorite from "@material-ui/icons/Favorite";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import { NFTStorage, File, Blob } from "nft.storage";
-import Muted from "/components/Typography/Muted.js";
+import Muted from "../../components/Typography/Muted.js";
 
 import {
   QUICKMINT_FACTORY_ABI,
@@ -30,7 +30,9 @@ import {
   QUICKMINT_COLLECTION_ABI,
 } from "../../blockchain/constants";
 import { ethers } from "ethers";
-import styles from "/styles/jss/nextjs-material-kit/pages/landingPageSections/workStyle.js";
+import styles from "../../styles/jss/nextjs-material-kit/pages/landingPageSections/workStyle.js";
+
+import LoadingAnimation from "../../utils/LoadingAnimation";
 
 const { Dragger } = Upload;
 const steps = ["Enter NFT Details", "View Metadata", "Mint Your NFT"];
@@ -308,7 +310,8 @@ export default function QuickMintForm() {
             </Stepper>
           </Box>
           <br />
-          <div style={{ color: "black" }}>Loading ...</div>
+          <Box sx={{mt:20}}><LoadingAnimation /></Box>
+          {/* <LoadingAnimation /> */}
         </div>
       </div>
     );
@@ -544,9 +547,11 @@ export default function QuickMintForm() {
                         <Card.Img
                           src={imageLink}
                           style={{
-                            width: "500px",
+                            // width: "500px",
+                            // height: "auto",
+                            width: "auto",
                             height: "200px",
-                            borderRadius: "15px 15px 0px 0px",
+                            borderRadius: "10px 10px 10px 10px",
                           }}
                         />
 
